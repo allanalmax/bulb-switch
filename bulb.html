@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        img {
+            width: 100%;
+            height: 50%;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <div v-if="program == 'off'">
+            <img src="/vue/assignments/images/bulb_off.jpg" alt="">
+        </div>
+        <div v-else>
+            <img src="/vue/assignments/images/bulb_on.jpg" alt="">
+        </div>
+    </div>
+    <script src="/vue/assignments/vue.js"></script>
+    <script src="/vue/assignments/bulb.js"></script>
+</body>
+</html>
