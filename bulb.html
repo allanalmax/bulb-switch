@@ -1,27 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
         img {
-            width: 100%;
-            height: 50%;
+            margin-left: 500px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        button {
+            margin-left: 520px;
+            margin-top: 10px;
+            width: 60px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: gray;
         }
     </style>
-    <title>Document</title>
-</head>
-<body>
+    <title>Bulb App</title>
+  </head>
+  <body>
     <div id="app">
-        <div v-if="program == 'off'">
-            <img src="/vue/assignments/images/bulb_off.jpg" alt="">
-        </div>
-        <div v-else>
-            <img src="/vue/assignments/images/bulb_on.jpg" alt="">
-        </div>
+      <h1>{{appName}}</h1>
+      <div v-if="bulbSwitch">
+        <img src="/vue/assignments/images/bulb_off.gif" alt="" />
+      </div>
+      <div v-else>
+        <img src="/vue/assignments/images/bulb_on.gif" alt="" />
+      </div>
+      <button v-on:click="switchImage">{{switchState}}</button>
     </div>
     <script src="/vue/assignments/vue.js"></script>
     <script src="/vue/assignments/bulb.js"></script>
-</body>
+  </body>
 </html>
